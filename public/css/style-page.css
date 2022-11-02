@@ -1,0 +1,96 @@
+.head {
+    display: flex;
+    padding-top: 7%;
+    background-image: linear-gradient(#d1f5fd, #fff);
+    margin-top: 0;
+    flex-direction: row;
+}
+.head-title {
+    flex: 1;
+    margin: 5%;
+    text-align: left;
+}
+
+.head-img {
+    float: right;
+    flex: 1;
+    width: auto;
+    height: 200px;
+}
+
+.info-desc {
+    display: flex;
+    flex-direction: column;
+}
+.text-title {
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 6%;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.text-description {
+    font-size: 17px;
+    color: #111;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .head {
+        height: 32vh;
+    }
+    .myh1 {
+        top: 16%;
+        left: 30%;
+        right: 30%;
+    }
+    .tab-content img {
+        flex: 1;
+    }
+    .wrap-content p {
+        font-size: 16px;
+        margin-right: 3%;
+        margin-left: 0;
+    }
+    .tab-icon {
+        margin-right: 2%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    .tabs ul li label {
+        white-space: initial;
+    }
+    .tabs ul li label br {
+        display: initial;
+    }
+    .tabs ul li label svg {
+        height: 2.5em;
+    }
+    .font-tabs {
+        font-size: 15px;
+    }
+    .tab-content img {
+        flex: 0.8;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .head-title {
+        margin-top: 10%;
+    }
+    .head-img {
+        margin-top: 10%;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .head-title {
+        margin-top: 10%;
+    }
+    .head-img {
+        margin-top: 10%;
+    }
+}

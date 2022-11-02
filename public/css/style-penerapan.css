@@ -1,0 +1,314 @@
+/* page penerapan, fitur */
+.head {
+    width: 100%;
+    padding-top: 10%;
+    height: 38vh;
+    background-image: url("/image/cover-penerapan.png");
+    background-repeat: no-repeat;
+    margin-top: 0;
+}
+
+.timeline {
+    margin-top: 0;
+}
+
+.timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 8px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-radius: 20%;
+    background: #b3e5fc;
+}
+.timeline ul li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    background: #b3e5fc;
+}
+
+.timeline-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.timeline-container {
+    display: flex;
+    align-items: center;
+    gap: 20%;
+}
+
+.timeline-card {
+    width: 500px;
+    height: 400px;
+    background: #b3e5fc;
+    box-shadow: 4px 13px 30px 1px rgba(247, 250, 51, 0.486);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.timeline-img {
+    width: 300px;
+    height: 300px;
+}
+
+.discovery {
+    width: 300px;
+    height: 60px;
+    background-color: #ffc100;
+    border-radius: 10px;
+    margin: auto auto 0;
+    align-items: center;
+    text-align: center;
+}
+.time-title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 16px;
+}
+
+.img-time {
+    display: none;
+    width: 100px;
+    margin: 5px auto;
+}
+
+.scientist {
+    width: 300px;
+    height: 270px;
+    background-color: #fff;
+    border-radius: 10px;
+    align-items: center;
+    margin: auto;
+}
+
+.time-desc {
+    font-size: 1.3rem;
+    margin: 15px;
+}
+.time-button {
+    width: 120px;
+    height: 30px;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+    background-color: #007dff;
+    border-color: transparent;
+    border-radius: 5px;
+    margin: 0 auto 0 15px;
+    position: relative;
+    z-index: 100;
+}
+.timeline ul li div .scientist .time-button:hover {
+    background-color: #111;
+    font-size: 1.6rem;
+}
+.timeline ul li:nth-of-type(odd) > .timeline-box {
+    left: 45px;
+}
+.timeline ul li:nth-of-type(even) > .timeline-box {
+    left: -439px;
+}
+.timeline ul li .timeline-box {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+}
+.timeline ul li:nth-of-type(odd) .timeline-box {
+    transform: translate3d(70px, -10px, 0) rotate(10deg);
+}
+.timeline ul li:nth-of-type(even) .timeline-box {
+    transform: translate3d(-70px, -10px, 0) rotate(10deg);
+}
+.timeline ul li.in-view .timeline-box {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .head {
+        height: 32vh;
+    }
+    .myh1 {
+        top: 16%;
+        left: 30%;
+        right: 30%;
+    }
+    .timeline-card {
+        width: 440px;
+        height: 380px;
+    }
+    .time-title {
+        font-size: 1.8rem;
+    }
+    .timeline-img {
+        width: 250px;
+        height: 250px;
+    }
+    .discovery {
+        width: 270px;
+        height: 50px;
+    }
+    .scientist {
+        width: 270px;
+        height: 270px;
+    }
+    .timeline-box {
+        width: calc(10vw - 91px);
+    }
+    .timeline ul li .timeline-box {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.1s ease-in-out;
+    }
+    .timeline ul li:nth-of-type(odd) .timeline-box {
+        transform: translate3d(5px, -10px, 0) rotate(5deg);
+    }
+    .timeline ul li:nth-of-type(even) .timeline-box {
+        transform: translate3d(-5px, -10px, 0) rotate(5deg);
+    }
+    .timeline ul li.in-view .timeline-box {
+        transform: none;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .head {
+        height: 26vh;
+    }
+    .myh1 {
+        top: 15%;
+        left: 10%;
+        right: 10%;
+    }
+    .timeline-container {
+        gap: 0;
+    }
+    .timeline ul li {
+        margin-left: 0;
+    }
+    .timeline-box {
+        width: calc(100vw - 91px);
+    }
+    .timeline ul li:nth-of-type(even) > .timeline-box {
+        left: 45px;
+    }
+    .timeline-card {
+        width: 315px;
+        height: 460px;
+        margin-left: 70px;
+    }
+    .scientist {
+        height: 370px;
+        width: 280px;
+    }
+    .discovery {
+        width: 280px;
+        height: 50px;
+    }
+    .time-title {
+        font-size: 1.8rem;
+    }
+    .img-time {
+        display: block;
+    }
+    .timeline-container {
+        margin: 0;
+    }
+    .timeline-img {
+        display: none;
+    }
+    .timeline ul li .timeline-box {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.1s ease-in-out;
+    }
+    .timeline ul li:nth-of-type(odd) .timeline-box {
+        transform: translate3d(3px, -1px, 0) rotate(2.4deg);
+    }
+    .timeline ul li:nth-of-type(even) .timeline-box {
+        transform: translate3d(-3px, -1px, 0) rotate(2.4deg);
+    }
+    .timeline ul li.in-view .timeline-box {
+        transform: none;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .head {
+        height: 26vh;
+    }
+    .myh1 {
+        top: 12%;
+        left: 15%;
+        right: 15%;
+        font-size: 30px;
+    }
+    .timeline-container {
+        gap: 0;
+    }
+    .timeline ul li {
+        margin-left: 0;
+    }
+    .timeline-box {
+        width: calc(100vw - 91px);
+    }
+    .timeline ul li:nth-of-type(even) > .timeline-box {
+        left: 45px;
+    }
+    .timeline-card {
+        width: 315px;
+        height: 460px;
+        margin-left: 70px;
+    }
+    .scientist {
+        height: 370px;
+        width: 280px;
+    }
+    .discovery {
+        width: 280px;
+        height: 50px;
+    }
+    .time-title {
+        font-size: 1.8rem;
+    }
+    .img-time {
+        display: block;
+    }
+    .timeline-container {
+        margin: 0;
+    }
+    .timeline-img {
+        display: none;
+    }
+    .timeline ul li .timeline-box {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.1s ease-in-out;
+    }
+    .timeline ul li:nth-of-type(odd) .timeline-box {
+        transform: translate3d(3px, -1px, 0) rotate(2.4deg);
+    }
+    .timeline ul li:nth-of-type(even) .timeline-box {
+        transform: translate3d(-3px, -1px, 0) rotate(2.4deg);
+    }
+    .timeline ul li.in-view .timeline-box {
+        transform: none;
+        visibility: visible;
+        opacity: 1;
+    }
+}
